@@ -1,8 +1,0 @@
-# -*- mode: snippet -*-
-#name : #+TITLE .. #+DATE .. #+CATEGORY
-#key : title_
-#contributor : Yuan Fu
-# --
-#+TITLE: $1
-#+DATE: $2
-#+CATEGORY: $0
