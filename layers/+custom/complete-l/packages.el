@@ -77,7 +77,11 @@
              (dotspacemacs-directory-snippets-dir (when dotspacemacs-directory
                                                     (expand-file-name
                                                      "snippets"
-                                                     dotspacemacs-directory))))
+                                                     dotspacemacs-directory)))
+             (root-dir-snippets-dir (expand-file-name
+                                     "snippets"
+                                     spacemacs-start-directory))
+             )
         (setq yas-snippet-dirs nil)
         ;; ~/.emacs.d/layers/complete-l/snippets
         (push spacemacs-layer-snippets-dir yas-snippet-dirs)
@@ -86,6 +90,8 @@
         ;; ~/.spacemacs.d/snippets
         (when dotspacemacs-directory-snippets-dir
           (push dotspacemacs-directory-snippets-dir yas-snippet-dirs))
+        (when root-dir-snippets-dir
+          (push root-dir-snippets-dir yas-snippet-dirs))
         ;; arbitrary directories in `complete-l-private-snippets-directory'
         (when private-yas-dir
           (if (listp private-yas-dir)
