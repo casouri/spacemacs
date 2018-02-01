@@ -55,3 +55,6 @@ private/
 /games/
 /doc/COMMUNITY.org
 /doc/CONTRIBUTING.org
+
+# byte compile files
+/**/*.elc
