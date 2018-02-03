@@ -32,27 +32,30 @@
       (spacemacs/set-leader-keys
         dotspacemacs-emacs-command-key 'counsel-M-x
         ;; files
-        "ff"  'counsel-find-file
-        "fel" 'counsel-find-library
-        "fL"  'counsel-locate
+        "ff"  #'counsel-find-file
+        "fel" #'counsel-find-library
+        "fL"  #'counsel-locate
         ;; help
-        "?"   'counsel-descbinds
-        "hdf" 'counsel-describe-function
-        "hdF" 'counsel-describe-face
-        "hdm" 'spacemacs/describe-mode
-        "hdv" 'counsel-describe-variable
-        "hi"  'counsel-info-lookup-symbol
-        "hR"  'spacemacs/counsel-search-docs
+        "?"   #'counsel-descbinds
+        "hdf" #'counsel-describe-function
+        "hdF" #'counsel-describe-face
+        "hdm" #'spacemacs/describe-mode
+        "hdv" #'counsel-describe-variable
+        "hdd" #'apropos
+        "hi"  #'counsel-info-lookup-symbol
+        "hR"  #'spacemacs/counsel-search-docs
         ;; insert
-        "iu"  'counsel-unicode-char
+        "iu"  #'counsel-unicode-char
         ;; jump
         ;; register/ring
-        "ry"  'counsel-yank-pop
-        "rm"  'counsel-mark-ring
+        "ry"  #'counsel-yank-pop
+        "rm"  #'counsel-mark-ring
         ;; jumping
-        "sj"  'counsel-imenu
+        "sj"  #'counsel-imenu
         ;; themes
-        "Ts"  'counsel-load-theme
+        "Ts"  #'counsel-load-theme
+        ;; external tool
+        "sr"  #'counsel-rg
         ))
     :config
     (progn
