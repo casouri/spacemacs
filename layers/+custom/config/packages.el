@@ -51,8 +51,9 @@
   (define-key evil-normal-state-map (kbd "K") 'scroll-up-reserve-point)
 
   ;; use capslock led to indicate insert & nomal mode
-  (add-hook 'evil-insert-state-entry-hook (lambda () (shell-command-to-string "setleds +caps")))
-  (add-hook 'evil-normal-state-entry-hook (lambda () (shell-command-to-string "setleds -caps")))
+  ;; (add-hook 'evil-insert-state-entry-hook (lambda () (shell-command-to-string "setleds +caps")))
+  ;; (add-hook 'evil-normal-state-entry-hook (lambda () (shell-command-to-string "setleds -caps")))
+
   ;; custom functions
   (define-key evil-insert-state-map (kbd "<C-return>") 'end-of-line-and-indented-new-line)
 
